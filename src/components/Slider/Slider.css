@@ -1,0 +1,23 @@
+.slider{
+    padding:5rem;
+}
+
+.product{
+    width: calc(100%/4);
+    margin: 2px;
+    /* border: 2px solid black ; */
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 18.75;
+}
+
+.img{
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
