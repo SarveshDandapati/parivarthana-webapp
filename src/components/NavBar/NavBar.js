@@ -1,7 +1,7 @@
 import React from 'react';
-import cartOutline from '../assests/cart-outline.svg';
-import cartFilled from '../assests/cart-filled.svg';
-import menu from '../assests/menu.svg';
+import cartOutline from '../../assests/cart-outline.svg';
+import cartFilled from '../../assests/cart-filled.svg';
+import menu from '../../assests/menu.svg';
 import "./NavBar.css";
 
 
