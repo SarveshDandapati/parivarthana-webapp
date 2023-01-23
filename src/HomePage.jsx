@@ -1,6 +1,6 @@
 import "./HomePage.css";
-import NavBar from "./components/NavBar/NavBar.js";
-import Slider from "./components/Slider/Slider.js";
+import NavBar from "./components/NavBar/NavBar.jsx";
+import Slider from "./components/Slider/Slider.jsx";
 
 const HomePage = () => {
     return (
