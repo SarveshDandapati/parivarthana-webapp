@@ -25,7 +25,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default class Responsive extends Component {
+export default class ResponsiveSlider extends Component {
   render() {
     var settings = {
       dots: true,
@@ -71,7 +71,7 @@ export default class Responsive extends Component {
         <div className='slider'>
           <Slider {...settings}>
           {dataset.map((item)=>(
-            <div className="product">
+            <div className="product" key={item.id}>
               <img className="img" src={item.linkImg} alt="prd"/>
               <p className="prd-title">{item.title}</p>
               <p className="prd-price">&#8377; {item.price}</p>
