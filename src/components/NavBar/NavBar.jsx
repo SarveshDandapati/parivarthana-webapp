@@ -8,14 +8,9 @@ import Menu from '../Menu/Menu.jsx';
 class NavBar extends React.Component{
 
     render(){
-      //const [page, setPage] = useState('home');
-      const toPage = e =>{
-        e.preventDefault();
-        
-      };  
       return(
         <section className="nav">
-                <div className="menu-icon"><img src={menu} align="left"  alt="menu" onClick={toPage('menu')}/></div>
+                <div className="menu-icon"><img src={menu} align="left"  alt="menu"/></div>
                 <h1 align="center">Parivarthana</h1>
                 <div className="cart-div"><img src={cartOutline} align="right" onMouseOver={e => e.currentTarget.src = cartFilled}
               onMouseOut={e => e.currentTarget.src = cartOutline} alt="cart" /></div>
