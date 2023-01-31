@@ -1,8 +1,24 @@
 .nav{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-area: "menu-icon logo cart-div"
+                ". nav-links .";
     background-color: #0c6c2c;
     padding: 1em;
+}
+
+.nav-links{
+    background-color: white;
+    color: #0c6c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-links{
+    display:flex;  
+    list-style:none;
+    justify-content: space-between;
 }
 
 h1{

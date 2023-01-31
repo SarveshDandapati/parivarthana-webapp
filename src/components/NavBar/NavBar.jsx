@@ -11,10 +11,18 @@ class NavBar extends React.Component{
       return(
         <section className="nav">
                 <div className="menu-icon"><img src={menu} align="left"  alt="menu"/></div>
-                <h1 align="center">Parivarthana</h1>
+                <h1 align="center" className='logo'>Parivarthana</h1>
                 <div className="cart-div"><img src={cartOutline} align="right" onMouseOver={e => e.currentTarget.src = cartFilled}
               onMouseOut={e => e.currentTarget.src = cartOutline} alt="cart" /></div>
+              <div className='nav-links'>
+                <ul className='list-links'>
+                  <li>Home</li>
+                  <li>Product</li>
+                  <li>Profile</li>
+                </ul>
+              </div>
         </section>
+        
       );
     }    
 }
