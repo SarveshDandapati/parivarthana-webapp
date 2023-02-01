@@ -15,8 +15,8 @@
     align-items: center;
 }
 
-.list-links{
-    display:flex;  
+.list-link{
+    display: inline-block;  
     list-style:none;
     justify-content: space-between;
 }
