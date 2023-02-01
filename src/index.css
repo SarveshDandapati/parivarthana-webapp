@@ -57,3 +57,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.navbar-brand{
+	padding-left: 1rem;
+}
+nav{
+	background-color: #0c6c2c;
+}

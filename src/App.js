@@ -1,8 +1,8 @@
-import "./HomePage.css";
+import "./App.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Slider from "./components/Slider/Slider.jsx";
 import Menu from "./components/Menu/Menu.jsx";
-const HomePage = () => {
+const App = () => {
     return (
         <header>
             <NavBar/>
@@ -11,4 +11,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default App;
