@@ -1,5 +1,7 @@
 import React from "react";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
+
 class NavBar extends React.Component {
   render() {
     return (
@@ -23,7 +25,7 @@ class NavBar extends React.Component {
             <ul className="navbar-nav ms-md-auto gap-2">
               <li className="nav-item rounded">
                 <a className="nav-link active text-white" aria-current="page" href="#">
-                  <i className="bi bi-house-fill me-2"></i>Home
+                <Link to="/">Home</Link>
                 </a>
               </li>
               <li className="nav-item rounded">
@@ -33,21 +35,21 @@ class NavBar extends React.Component {
               </li>
               <li className="nav-item rounded">
                 <a className="nav-link text-white" href="#">
-                  <i className="bi bi-telephone-fill me-2"></i>Contact
+                <Link to="/product">Contacts</Link>
                 </a>
               </li>
               <li className="nav-item rounded">
                 <a className="nav-link text-white" href="#">
-                  <i className="bi bi-telephone-fill me-2"></i>Products
+                <Link to="/product">Products</Link>
                 </a>
               </li>
               <li>
                     <form className="form-inline">
                       <button className="btn btn-outline text-white" type="button">
-                        Sign In
+                      <Link to="/signUp">Sign In</Link>
                       </button>
                       <button className="btn btn-outline text-white border" type="button">
-                        Sign Up
+                      <Link to="/signUp">Sign Up</Link>
                       </button>
                     </form>
                   </li>

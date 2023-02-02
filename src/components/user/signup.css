@@ -1,0 +1,9 @@
+.signUp-page{
+    z-index: 1;
+}
+
+.inputUser{
+    display: block;
+    padding: 2px;
+    width: 200px;
+}
