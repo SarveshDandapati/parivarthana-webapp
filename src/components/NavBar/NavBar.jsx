@@ -25,31 +25,31 @@ class NavBar extends React.Component {
             <ul className="navbar-nav ms-md-auto gap-2">
               <li className="nav-item rounded">
                 <a className="nav-link active text-white" aria-current="page" href="#">
-                <Link to="/">Home</Link>
+                <Link to="/" className="link-style">Home</Link>
                 </a>
               </li>
               <li className="nav-item rounded">
                 <a className="nav-link text-white" href="#">
-                  <i className="bi bi-people-fill me-2"></i>About
+                <Link to="/product" className="link-style">About</Link>
                 </a>
               </li>
               <li className="nav-item rounded">
                 <a className="nav-link text-white" href="#">
-                <Link to="/product">Contacts</Link>
+                <Link to="/product" className="link-style">Contacts</Link>
                 </a>
               </li>
               <li className="nav-item rounded">
                 <a className="nav-link text-white" href="#">
-                <Link to="/product">Products</Link>
+                <Link to="/product" className="link-style">Products</Link>
                 </a>
               </li>
               <li>
                     <form className="form-inline">
                       <button className="btn btn-outline text-white" type="button">
-                      <Link to="/signUp">Sign In</Link>
+                      <Link to="/signUp" className="link-style">Sign In</Link>
                       </button>
                       <button className="btn btn-outline text-white border" type="button">
-                      <Link to="/signUp">Sign Up</Link>
+                      <Link to="/signUp" className="link-style">Sign Up</Link>
                       </button>
                     </form>
                   </li>
