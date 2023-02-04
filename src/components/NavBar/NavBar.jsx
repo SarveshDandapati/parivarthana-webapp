@@ -46,7 +46,7 @@ class NavBar extends React.Component {
               <li>
                     <form className="form-inline">
                       <button className="btn btn-outline text-white" type="button">
-                      <Link to="/signUp" className="link-style">Sign In</Link>
+                      <Link to="/signIn" className="link-style">Sign In</Link>
                       </button>
                       <button className="btn btn-outline text-white border" type="button">
                       <Link to="/signUp" className="link-style">Sign Up</Link>
