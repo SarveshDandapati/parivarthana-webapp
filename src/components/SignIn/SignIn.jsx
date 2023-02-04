@@ -1,24 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SignIn.css";
 import { useState } from "react";
+import jwtDecode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [dateOfBirth, setDOB] = useState();
 
-  const collectData = async () => {
-    console.log("checking ");
-    console.log(password);
-    const result = await fetch("http://localhost:5000/user/signup", {
+  const navigate = useNavigate();  
+  function handleCallBack(response){
+    //console.log(response);
+    var userObject = jwtDecode(response.credential);
+    const cred = response.credential;
+    const name = userObject.given_name; 
+    const email = userObject.email;
+    
+    const result = fetch("http://localhost:5000/user/signIn-google", {
       method: "post",
-      body: JSON.stringify({ name, email, password, dateOfBirth }),
+      body: JSON.stringify({name, email}),
       headers: {
         "Content-Type": "application/json",
-      },
+      }
+    }).then(response => {
+      console.log(response.status);
+      console.log(response.message);
+      localStorage.setItem("USER", JSON.stringify({cred}));
+      navigate("/");
+    })
+    .catch(err => {
+      console.log("Error occured while api call to backend");
     });
-  };
+  }
+
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: "379483914693-ccia92t5906f0tog6bkgih3e6iudter5.apps.googleusercontent.com",
+      scope: "",
+      callback: handleCallBack,
+    });
+
+    google.accounts.id.renderButton(
+      document.getElementById("signInDiv"),
+      {theme: "outline", size:"large"}
+    );
+
+  }, []);
 
   return (
     <div id="sign-in-container">
@@ -54,24 +80,14 @@ const SignUp = () => {
             Sign in
           </button>
         </form>
+        <br />
+        <div id="signInDiv"></div>
       </main>
       <aside>
         <div className="background-img"></div>
       </aside>
     </div>
-    // <div className="signUp-page">
-    //     <h1>Register</h1>
-    //     <div className="inputUser">
-    //         <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Enter the Name"/>
-    //         <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Enter the Email"/>
-    //         <input type="text" value={dateOfBirth} onChange={(e)=>setDOB(e.target.value)} placeholder="Enter the DOB"/>
-    //         <input type="text" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Enter the Password"/>
-    //     </div>
-    //     <button type="submit" onClick={collectData}>Submit</button>
-    //     <div>
-    //         <button>Google SignUp</button>
-    //     </div>
-    // </div>
+    
   );
 };
 
