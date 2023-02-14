@@ -8,7 +8,7 @@ class NavBar extends React.Component {
       <nav className="navbar navbar-expand-lg navbar-light ">
         <div className="container-fluid">
           <a className="navbar-brand text-white" href="#">
-            Parivarthana
+          <Link to="/" className="link-style">Parivarthana</Link>
           </a>
           <button
             className="navbar-toggler bg-white text-black"
@@ -30,12 +30,12 @@ class NavBar extends React.Component {
               </li>
               <li className="nav-item rounded">
                 <a className="nav-link text-white" href="#">
-                <Link to="/product" className="link-style">About</Link>
+                <Link to="/about" className="link-style">About</Link>
                 </a>
               </li>
               <li className="nav-item rounded">
                 <a className="nav-link text-white" href="#">
-                <Link to="/product" className="link-style">Contacts</Link>
+                <Link to="/contacts" className="link-style">Contacts</Link>
                 </a>
               </li>
               <li className="nav-item rounded">
