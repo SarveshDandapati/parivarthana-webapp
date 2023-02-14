@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Slider from "./components/Slider/Slider.jsx";
 import SignIn from "./components/SignIn/SignIn.jsx";
+import ProductPage from "./components/ProductPage/ProductPage.jsx";
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Slider /> } />
                     <Route path="/signIn" element={<SignIn />}/>
+                    <Route path="/product" element={<ProductPage />}/>
                 </Routes>
             </BrowserRouter>
         </header>
