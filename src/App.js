@@ -1,5 +1,5 @@
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar.jsx";
+import HomePage from "./components/HomePage/HomePage.jsx";
 import Slider from "./components/Slider/Slider.jsx";
 import SignIn from "./components/SignIn/SignIn.jsx";
 import ProductPage from "./components/ProductPage/ProductPage.jsx";
@@ -9,7 +9,7 @@ const App = () => {
     return (
         <header>
             <BrowserRouter>
-                <NavBar/>
+                <HomePage/>
                 <Routes>
                     <Route path="/" element={<Slider /> } />
                     <Route path="/signIn" element={<SignIn />}/>
