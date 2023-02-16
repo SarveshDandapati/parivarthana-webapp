@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class HomePage extends React.Component {
   render() {
     return (
-      <div>
+      <div className="home-container">
         <nav className="navbar navbar-expand-lg navbar-light ">
           <div className="container-fluid">
             <a className="navbar-brand text-white" href="#">

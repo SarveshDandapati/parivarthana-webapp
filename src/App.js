@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage/HomePage.jsx";
 import Slider from "./components/Slider/Slider.jsx";
 import SignIn from "./components/SignIn/SignIn.jsx";
 import ProductPage from "./components/ProductPage/ProductPage.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
                     <Route path="/signIn" element={<SignIn />}/>
                     <Route path="/product" element={<ProductPage />}/>
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </header>
     );
