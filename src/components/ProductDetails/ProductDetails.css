@@ -1,0 +1,60 @@
+
+.small-img-group
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col
+{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.sproduct select
+{
+display: block;
+padding: 5px 10px;
+}
+
+.sproduct input
+{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.sproduct input:focus
+{
+    outline: none;
+}
+
+button
+{
+    font-size:0.8rem ;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #2A7C6F;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover
+{
+    background-color: #064d41;
+}
+
+.buy-btn
+{
+    background: #2A7C6F;
+    opacity: 1;
+    transition: 0.3s all;    
+    border: none;
+}
+

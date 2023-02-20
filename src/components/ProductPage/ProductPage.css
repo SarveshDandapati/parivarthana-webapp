@@ -24,6 +24,9 @@ img {
   padding: 10px;
   padding-left: 40px;
 }
+ul{
+  list-style: none;
+}
 @media (max-width: 993px) {
   .products {
     grid-template-columns: 1fr 1fr;
