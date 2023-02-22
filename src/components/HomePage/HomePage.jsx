@@ -8,11 +8,9 @@ class HomePage extends React.Component {
       <div className="home-container">
         <nav className="navbar navbar-expand-lg navbar-light ">
           <div className="container-fluid">
-            <a className="navbar-brand text-white" href="#">
-              <Link to="/" className="link-style">
+              <Link to="/" className="navbar-brand text-white link-style">
                 Parivarthana
               </Link>
-            </a>
             <button
               className="navbar-toggler bg-white text-black"
               type="button"
@@ -27,36 +25,24 @@ class HomePage extends React.Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-md-auto gap-2">
                 <li className="nav-item rounded">
-                  <a
-                    className="nav-link active text-white"
-                    aria-current="page"
-                    href="#"
-                  >
-                    <Link to="/" className="link-style">
+                    <Link to="/" className="nav-link active text-white link-style">
                       Home
                     </Link>
-                  </a>
                 </li>
                 <li className="nav-item rounded">
-                  <a className="nav-link text-white" href="#">
-                    <Link to="/about" className="link-style">
+                    <Link to="/about" className="nav-link text-white link-style">
                       About
                     </Link>
-                  </a>
                 </li>
                 <li className="nav-item rounded">
-                  <a className="nav-link text-white" href="#">
-                    <Link to="/contacts" className="link-style">
+                    <Link to="/contacts" className="nav-link text-white link-style">
                       Contacts
                     </Link>
-                  </a>
                 </li>
                 <li className="nav-item rounded">
-                  <a className="nav-link text-white" href="#">
-                    <Link to="/product" className="link-style">
+                    <Link to="/product" className="nav-link text-white link-style">
                       Products
                     </Link>
-                  </a>
                 </li>
                 <li>
                   <form className="form-inline">
