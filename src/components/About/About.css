@@ -1,0 +1,247 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+/* Sections */
+
+.colored-section {
+  background-color: #2A7C6F;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Header Section */
+
+.big-heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+#title {
+  text-align: left;
+}
+
+/* .container-fluid {
+  padding: 3% 10% 9%;
+} */
+
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+.image {
+  width: 60%;
+  position: absolute;
+  right: 30%;
+}
+.image img{
+  width: 100%;
+  transition: transform .3s;
+}
+.image:hover {
+  transform: scale(1.2);
+}
+.image::after {
+  content: "";
+    width: 100%;
+    height: 100%;
+    background-image:  linear-gradient(to right bottom, var(#ff4c68), var(--colorTwo));
+    left: 0;
+    right: 0;
+    opacity: .5;
+}
+
+/* Features section */
+
+#features {
+  padding: 4% 15%;
+  position: relative;
+}
+
+p {
+  color: #2A7C6F;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.feature-box {
+  background-color:  var(--#5712c6);
+  color: #2A7C6F;
+  text-align: center;
+  padding: 20PX 0PX;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.feature-icon {
+  font-size: 4rem;
+}
+
+/* Testimonial Section */
+
+.testimonials-text {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.testimonials-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 1rem;
+}
+
+#press {
+  padding-bottom: 3%;
+}
+
+.press-img {
+  width: 15%;
+  margin: 20px 15px;
+}
+
+.carousel-item {
+  padding: 8% 7%;
+}
+
+/* Pricing Section */
+
+#pricing {
+  padding: 100px;
+}
+
+.pricing-coloumn {
+  padding: 3% 2%;
+}
+
+.pricing-text {
+  font-weight: 700;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Call to action section */
+
+#cta {
+  padding: 6% 8%;
+}
+
+/* Footer section */
+
+#footer {
+  color: gray;
+  padding: 5% 15%;
+}
+
+.footer-logo {
+  margin: 15px 10px;
+}
+.aboout-us-section {
+  width: 100%;
+  padding: calc(5% + 30px) 0px;
+}
+.about-us-section .img-head{
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us-section .img-head img{
+  width: 100%;
+  transition: transform .3s;
+}
+.about-us-section .img-head:hover img {
+  transform: scale(1.2);
+}
+.about-us-section .text-head {
+  font-size: 28px;
+  color: var(--colorTwo);
+}
+.about-us-section .break-small{
+  width: 80px;
+  height: 3px;
+  background-color: var(--colorTwo);
+}
+.about-us-section .text-para{
+  font-size: 16px;
+  color: #2A7C6F;
+}
+.about-us-section .box {
+  background-color:  var(--colorTwo);
+  color: #2A7C6F;
+  text-align: center;
+  padding: 20PX 0PX;
+  position: relative;
+  overflow: hidden;
+}
+.about-us-section .box i{
+  font-size: 42px;
+  background-color: #11c46a;
+}
+.about-us-section .box h4{
+  font-size: 14px;
+}
+.about-us-section .box p{
+  font-size: 22px;
+}
+.about-us-section .box::after,
+.about-us-section .box::before {
+  content: "";
+position:  absolute;
+width: 100px;
+height: 100px;
+background-color:  rgba(18, 142, 84, 0.333);
+border-radius: 50%;
+transition: transform .3s;
+}
+.about-us-section .box::after{
+  left: -50px;
+  right: -50px;
+}
+.about-us-section .box::before{
+  right: -50px;
+  left: -50px;
+}
+.about-us-section .box:hover::after,
+.about-us-section .box:hover::before {
+  transform:  scale(1.2);
+}
+
+@media only screen and (max-width: 1024px) {
+  #title {
+    text-align: center;
+  }
+
+  .image-iphone {
+    position: static;
+    transform: rotate(0);
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .mobile {
+    padding-bottom: 15px;
+  }
+}

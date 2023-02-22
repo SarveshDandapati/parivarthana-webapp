@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp/SignUp.jsx"
 import ProductPage from "./components/ProductPage/ProductPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import About from "./components/About/About";
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path="/signIn" element={<SignIn />}/>
                     <Route path="/signUp" element={<SignUp />}/>
                     <Route path="/product" element={<ProductPage />}/>
+                    <Route path="/about" element={<About />}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>
