@@ -6,6 +6,21 @@ import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
 
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
+  
+  function callSignIn(){
+    const result = fetch("http://localhost:5000/user/signin",{
+      method: "post",
+      body: JSON.stringify({email,password}),
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+    localStorage.setItem("USER", JSON.stringify({email}));
+    navigate("/");
+  }
+
   const navigate = useNavigate();  
   function handleCallBack(response){
     //console.log(response);
@@ -23,7 +38,7 @@ const SignUp = () => {
     }).then(response => {
       console.log(response.status);
       console.log(response.message);
-      localStorage.setItem("USER", JSON.stringify({cred}));
+      localStorage.setItem("USER", JSON.stringify({email}));
       navigate("/");
     })
     .catch(err => {
@@ -58,6 +73,7 @@ const SignUp = () => {
               className="form-control"
               id="floatingInput"
               placeholder="name@example.com"
+              onChange={e => setEmail(e.target.value)}
             />
             <label for="floatingInput">Email address</label>
           </div>
@@ -67,6 +83,7 @@ const SignUp = () => {
               className="form-control"
               id="floatingPassword"
               placeholder="Password"
+              onChange={e => setPassword(e.target.value)}
             />
             <label for="floatingPassword">Password</label>
           </div>
@@ -76,7 +93,7 @@ const SignUp = () => {
               <input type="checkbox" value="remember-me" /> Remember me
             </label>
           </div>
-          <button className="w-100 btn btn-lg btn-primary" type="submit">
+          <button className="w-100 btn btn-lg btn-primary" type="submit" onClick={() => callSignIn()}>
             Sign in
           </button>
         </form>
