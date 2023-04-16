@@ -19,11 +19,18 @@ import React, { useState } from "react";
 function getPrice(item) {
   let max = Math.max(...item.price);
   let min = Math.min(...item.price);
-  return (
-    <h2>
-      &#8377; {min} to &#8377; {max}
-    </h2>
-  );
+  if(max === min)
+    return (
+      <h2>
+        &#8377; {min}
+      </h2>
+    );
+  else
+    return (
+      <h2>
+        &#8377; {min} to &#8377; {max}
+      </h2>
+    );
 }
 
 const ProductDetails = () => {
@@ -77,16 +84,36 @@ const ProductDetails = () => {
             getPrice(product)
           )}
           {/* <h2>&#8377;{product.price[selected - 1]}</h2> */}
-          <select className="my-3" onChange={handleChange}>
+          {(product.size.length > 0) ? <select className="my-3" onChange={handleChange}>
             <option value="0">Select Size</option>
             <option value="1">Small</option>
             <option value="2">Large</option>
-          </select>
+          </select> : <></>}
+          
+          {(product.type.length > 0) ? <select className="my-3" onChange={handleChange}>
+            <option value="0">Select Type</option>
+            <option value="1">Normal</option>
+            <option value="2">Round</option>
+            <option value="3">With Frame</option>
+          </select> : <></>}
+          
+          
           {/* <input type="number" value="1" min="1" />
           <button className="buy-btn">Add to Cart</button> */}
           <h4 className="mt-5 mb-5">Product Description</h4>
           <span>
-            Make a statement with our Recycled Photo Frame and showcase your
+            {product.description}
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductDetails;
+
+
+/* Make a statement with our Recycled Photo Frame and showcase your
             favorite memories in an eco-friendly way.
             <br />
             <br />
@@ -113,12 +140,4 @@ const ProductDetails = () => {
             your memories, but you're also making a positive impact on the
             environment. It's the perfect gift for eco-conscious friends and
             family members or for anyone who appreciates beautiful, sustainable
-            home decor.
-          </span>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default ProductDetails;
+            home decor. */
