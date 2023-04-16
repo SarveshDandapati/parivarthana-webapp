@@ -7,9 +7,9 @@
   width: 80%;
   height: auto;
 }
-img {
+/* img {
   border-radius: 30px;
-}
+} */
 .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -19,7 +19,7 @@ img {
 .product {
   height: auto;
   width: auto;
-  background-color: #56877c46;
+  /* background-color: #56877c46; */
   border-radius: 25px;
   padding: 10px;
   padding-left: 40px;
