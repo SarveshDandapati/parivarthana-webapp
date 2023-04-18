@@ -15,6 +15,9 @@ const ProductPage = () => {
   return (
     <>
       <section>
+      <div className="break-small mb-2"></div>
+      <h1 className="text-head text-center">Products</h1>
+      <div className="break-small mb-5"></div>
         <div className="container">
           <ul className="products">
             {dataset.map((item) => (
