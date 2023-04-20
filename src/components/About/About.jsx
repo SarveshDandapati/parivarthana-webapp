@@ -1,4 +1,6 @@
 import "../About/About.css";
+import { Link } from "react-router-dom";
+
 // import one from "../../assets/1.jpeg";
 // import two from "../../assets/2.jpeg";
 import collegeimg from "../../assets/col_224.jpg";
@@ -11,13 +13,21 @@ const About = () => {
             <div className="row">
               <div className="col-12 col-lg-6 mb-4 mb-lg-0">
                 <div className="img-head">
-                  <img src={collegeimg} alt="College photo"/>
+                  <img src={collegeimg} alt="College photo" />
                 </div>
               </div>
               <div className="col-12 col-lg-6">
-                <h2 className="text-head">Know More About Us</h2>
+                <h2 className="text-head">What we do at Parivarthana ?</h2>
                 <div className="break-small mb-2"></div>
-                <p className="text-para">Parivarthana Unit is the decentralized, waste-management unit in the campus of CHRIST (Deemed to be University) which dates back to the year 2008. It creates both a social as well as an ecological impact. It is an organized effort in ensuring the proper waste-management practices with the help of the women working in the unit and all the students of the campus. Its main objective is to ensure that Christ University is a zero-waste campus by recycling all the materials that it can. 
+                <p className="text-para">
+                  Parivarthana Unit is the decentralized, waste-management unit
+                  in the campus of CHRIST (Deemed to be University) which dates
+                  back to the year 2008. It creates both a social as well as an
+                  ecological impact. It is an organized effort in ensuring the
+                  proper waste-management practices with the help of the women
+                  working in the unit and all the students of the campus. Its
+                  main objective is to ensure that Christ University is a
+                  zero-waste campus by recycling all the materials that it can.
                 </p>
                 <div className="row">
                   <div className="col-12 col-md-4 mb-2 mb-md-0">
@@ -54,15 +64,29 @@ const About = () => {
           </div>
           <div className="feature-box col-lg-4">
             <h3>Paper Recycling Unit</h3>
-            <p>‘Best out of waste’ by creating beautiful products from old paper</p>
+            <p>
+              ‘Best out of waste’ by creating beautiful products from old paper
+            </p>
           </div>
           <div className="feature-box col-lg-4">
             <h3>Water Treatment</h3>
-            <p>All the wastewater on campus is treated and reused at the Parivarthana unit</p>
+            <p>
+              All the wastewater on campus is treated and reused at the
+              Parivarthana unit
+            </p>
           </div>
         </div>
       </section>
-
+      <section className="text-center">
+        <Link to="/product" className="nav-link text-white link-style">
+          <button
+            className="w-50 btn btn-lg btn-primary"
+            type="button"
+          >
+            See our products
+          </button>
+        </Link>
+      </section>
       {/* <section className="colored-section" id="testimonials">
         <div
           id="testimonials-carousel"

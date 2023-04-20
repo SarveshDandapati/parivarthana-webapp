@@ -29,11 +29,11 @@ class HomePage extends React.Component {
                       Home
                     </Link>
                 </li>
-                <li className="nav-item rounded">
+                {/* <li className="nav-item rounded">
                     <Link to="/about" className="nav-link text-white link-style">
                       About
                     </Link>
-                </li>
+                </li> */}
                 <li className="nav-item rounded">
                     <Link to="/contacts" className="nav-link text-white link-style">
                       Contacts
@@ -54,14 +54,14 @@ class HomePage extends React.Component {
                         Sign In
                       </Link>
                     </button>
-                    <button
+                    {/* <button
                       className="btn btn-outline text-white border"
                       type="button"
                     >
                       <Link to="/signUp" className="link-style">
                         Sign Up
                       </Link>
-                    </button>
+                    </button> */}
                   </form>
                 </li>
               </ul>
