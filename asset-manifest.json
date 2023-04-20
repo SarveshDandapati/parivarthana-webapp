@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/parivarthana-webapp/static/css/main.510167c9.css",
+    "main.js": "/parivarthana-webapp/static/js/main.5ee6b7ad.js",
+    "static/js/787.5647bbb7.chunk.js": "/parivarthana-webapp/static/js/787.5647bbb7.chunk.js",
+    "static/media/bg-img.jpg": "/parivarthana-webapp/static/media/bg-img.a14cffa66814f3e1a2ee.jpg",
+    "static/media/col_224.jpg": "/parivarthana-webapp/static/media/col_224.5cbc33f26c327e460b19.jpg",
+    "static/media/slick.svg": "/parivarthana-webapp/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/parivarthana-webapp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/parivarthana-webapp/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/parivarthana-webapp/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/parivarthana-webapp/index.html",
+    "main.510167c9.css.map": "/parivarthana-webapp/static/css/main.510167c9.css.map",
+    "main.5ee6b7ad.js.map": "/parivarthana-webapp/static/js/main.5ee6b7ad.js.map",
+    "787.5647bbb7.chunk.js.map": "/parivarthana-webapp/static/js/787.5647bbb7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.510167c9.css",
+    "static/js/main.5ee6b7ad.js"
+  ]
+}
