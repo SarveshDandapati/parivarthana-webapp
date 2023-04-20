@@ -42,7 +42,7 @@ export const dataset = [
         type:[],
         price: [60],
         linkImg: '../../Images/JBox/',
-        description: "Introducing our unique and eco-friendly pen stand, handcrafted from high-quality handmade paper. Our pen stand is made of handmade paper, which is produced using traditional techniques that have been passed down for generations. The paper is made from sustainable and renewable materials, making it an eco-friendly choice for those who care about the environment. The pen stand features a sturdy and durable construction, ensuring that your pens stay in place and your stand remains stable. The stand's compact size allows it to fit on any desk or table without taking up too much space."  
+        description: "Introducing our exquisite and eco-friendly jewellery box, handcrafted from high-quality handmade paper. Each box is made with care and attention to detail, ensuring a unique and one-of-a-kind product that adds charm and elegance to any decor. Our jewellery box is made of handmade paper, which is produced using traditional techniques that have been passed down for generations. The paper is made from sustainable and renewable materials, making it an eco-friendly choice for those who care about the environment."
     },
     {
         id:6,
@@ -51,7 +51,7 @@ export const dataset = [
         type:[],
         price: [100],
         linkImg: '../../Images/BoxFrame/',
-        description: "Introducing our unique and eco-friendly pen stand, handcrafted from high-quality handmade paper. Our pen stand is made of handmade paper, which is produced using traditional techniques that have been passed down for generations. The paper is made from sustainable and renewable materials, making it an eco-friendly choice for those who care about the environment. The pen stand features a sturdy and durable construction, ensuring that your pens stay in place and your stand remains stable. The stand's compact size allows it to fit on any desk or table without taking up too much space."
+        description: "Introducing our beautiful and eco-friendly box with frame, handcrafted from high-quality handmade paper. Each box is made with care and attention to detail, ensuring a unique and one-of-a-kind product that adds charm and elegance to any decor. Our box with frame is made of handmade paper, which is produced using traditional techniques that have been passed down for generations. The paper is made from sustainable and renewable materials, making it an eco-friendly choice for those who care about the environment. The box features a sturdy and durable construction, ensuring that your belongings stay safe and protected. The frame on the lid of the box adds a touch of elegance and sophistication, making it a perfect addition to any room in your home."
     }
     // {
     //     id:7,
