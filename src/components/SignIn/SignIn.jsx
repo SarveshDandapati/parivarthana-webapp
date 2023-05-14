@@ -10,7 +10,7 @@ const SignUp = () => {
   const [password,setPassword] = useState("");
   
   function callSignIn(){
-    const result = fetch("http://localhost:5000/user/signin",{
+    const result = fetch("https://parivarthana-website.onrender.com/user/signin",{
       method: "post",
       body: JSON.stringify({email,password}),
       headers: {
@@ -29,7 +29,7 @@ const SignUp = () => {
     const name = userObject.given_name; 
     const email = userObject.email;
     
-    const result = fetch("http://localhost:5000/user/signIn-google", {
+    const result = fetch("https://parivarthana-website.onrender.com/user/signIn-google", {
       method: "post",
       body: JSON.stringify({name, email}),
       headers: {

@@ -11,7 +11,7 @@ const SignUp = () =>{
 
   function callSignUp(){
 
-    const result = fetch("http://localhost:5000/user/signup",{
+    const result = fetch("https://parivarthana-website.onrender.com/user/signup",{
       method: "post",
       body: JSON.stringify({name,email,password}),
       headers: {
