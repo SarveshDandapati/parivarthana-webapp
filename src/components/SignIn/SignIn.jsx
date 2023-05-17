@@ -4,21 +4,26 @@ import { useState } from "react";
 import jwtDecode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = ({setisAdmin}) => {
 
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   
   function callSignIn(){
-    const result = fetch("https://parivarthana-website.onrender.com/user/signin",{
+    fetch("http://localhost:5000/user/signin",{
       method: "post",
       body: JSON.stringify({email,password}),
       headers: {
         "Content-Type": "application/json",
       }
+    }).then( response => response.json()).then(response => {
+      if(response.isAdmin){
+        setisAdmin(true)
+      }
+      localStorage.setItem("USER", JSON.stringify({email}));
+      navigate("/");
     })
-    localStorage.setItem("USER", JSON.stringify({email}));
-    navigate("/");
+    
   }
 
   const navigate = useNavigate();  
@@ -64,7 +69,8 @@ const SignUp = () => {
   return (
     <div id="sign-in-container">
       <main className="form-signin w-100 m-auto">
-        <form className="form-style">
+        {/* <form className="form-style"> */}
+        <div className="form-style">
           <h1 className="h3 mb-3 fw-normal">Sign In</h1>
 
           <div className="form-floating">
@@ -96,7 +102,8 @@ const SignUp = () => {
           <button className="w-100 btn btn-lg btn-primary" type="submit" onClick={() => callSignIn()}>
             Sign in
           </button>
-        </form>
+          </div>
+        {/* </form> */}
         <br />
         <div id="signInDiv"></div>
       </main>
