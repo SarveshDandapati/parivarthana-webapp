@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import AddProduct from "./components/AddProduct/AddProduct";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from "react";
 import AdminHome from "./components/HomeAdmin/Home";
@@ -20,9 +21,9 @@ const App = () => {
                 {
                     isAdmin ? (
                         <>
+                            <AdminHome setisAdmin={setisAdmin} />
                             <Routes>
-                                <Route path="/admin" element={<AdminHome setisAdmin={setisAdmin} />} />
-                                <Route path="/*" element={<AdminHome setisAdmin={setisAdmin} />} />
+                                <Route path="/admin/AddNewProduct" element={<AddProduct />} />
                             </Routes>
                         </>
                     ) : (
