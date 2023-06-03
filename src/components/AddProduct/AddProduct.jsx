@@ -9,8 +9,11 @@ const AddProduct = () => {
     const [pname, setname] = useState("");
     const [prodImages, setProdImages] = useState([]);
     const [ImgeUrls, setImgeUrls] = useState([]);
-    const [check, setcheck] = useState(false)
+    const [check, setcheck] = useState(false);
     // console.log(ImgeUrls);
+    const [des, setdes] = useState("");
+    const [cost, setcost] = useState("");
+    const [inStock, setInStock] = useState(true)
 
     const uploadImage = async () => {
         Array.from(prodImages).map(async (image)=>{
@@ -26,7 +29,7 @@ const AddProduct = () => {
     const uploadProduct = () => {
         fetch("http://localhost:5000/product/register",{
                 method: "post",
-                body: JSON.stringify({pname,ImgeUrls}),
+                body: JSON.stringify({pname,ImgeUrls,des,cost,inStock}),
                 headers: {
                     "Content-Type": "application/json",
             }
@@ -53,13 +56,22 @@ const AddProduct = () => {
             ADD Product
             <br />
             <label htmlFor="">Name</label>
-            <br />
             <input type="text" onChange={(e) => setname(e.target.value)}/>
+            <br />
+            <label htmlFor="">Description</label>
+            <input type="text" onChange={(e) => setdes(e.target.value)} />
+            <br />
+            <label htmlFor="">cost</label>
+            <input type="text" onChange={(e) => setcost(e.target.value)}/>
             <br />
             <input type="file" multiple onChange={(e) => {setProdImages(e.target.files)}}/>
             <br />
-            <button onClick={uploadImage}>Upload Image</button>
-            <br />
+            {
+                !check && (
+                    
+                    <button onClick={uploadImage}>Upload Image</button>
+                )
+            }
             {
                 check && (
                     <button onClick={uploadProduct}>Upload Product</button>
