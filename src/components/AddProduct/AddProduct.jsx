@@ -3,6 +3,8 @@ import { storage } from "../FirebaseAuth/Firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 import { useNavigate } from "react-router-dom";
+import { Container, Row, Col, Form, FormGroup } from "reactstrap";
+import './AddProduct.css';  
 
 const AddProduct = () => {
     const navigate = useNavigate();
@@ -35,7 +37,7 @@ const AddProduct = () => {
             }
         }).then( response => response.json()).then(response => {
             console.log(response);    
-            navigate("/");
+            // navigate("/");
         })
     }
 
@@ -52,32 +54,53 @@ const AddProduct = () => {
     
 
     return(
-        <div>
-            ADD Product
-            <br />
-            <label htmlFor="">Name</label>
-            <input type="text" onChange={(e) => setname(e.target.value)}/>
-            <br />
-            <label htmlFor="">Description</label>
-            <input type="text" onChange={(e) => setdes(e.target.value)} />
-            <br />
-            <label htmlFor="">cost</label>
-            <input type="text" onChange={(e) => setcost(e.target.value)}/>
-            <br />
-            <input type="file" multiple onChange={(e) => {setProdImages(e.target.files)}}/>
-            <br />
-            {
-                !check && (
-                    
-                    <button onClick={uploadImage}>Upload Image</button>
-                )
-            }
-            {
-                check && (
-                    <button onClick={uploadProduct}>Upload Product</button>
-                )
-            }
-        </div>
+        <section>
+            <Container>
+                <Row>
+                    <Col lg='12'>
+                        <h4 className="mb-5">Add Products</h4>
+                        <Form>
+                          <FormGroup className="form_group">
+                            <span>Product title</span>
+                            <input type="text" placeholder="Gift Card" onChange={(e) => setname(e.target.value)}/>
+                            </FormGroup>  
+                            <FormGroup className="form_group">
+                            <span>Description</span>
+                            <input type="text" placeholder="Type description here" onChange={(e) => setdes(e.target.value)}/>
+                            </FormGroup> 
+                            <div className="d-flex align-items-center justify-content-between gap-5">
+                            <FormGroup className="form_group w-50">
+                            <span>Price</span>
+                            <input type="text" placeholder="100" onChange={(e) => setcost(e.target.value)}/>
+                            </FormGroup> 
+                            {/* <FormGroup className="form_group w-50">
+                            <span>Size/Colour</span>
+                            <select className="w-100 p-2">
+                                <option value="size">Size</option>
+                                <option value="colour">Colour</option>
+                            </select>
+                            </FormGroup> */}
+                            </div>
+                            <FormGroup className="form_group">
+                            <span>Product Image</span>
+                            <input type="file" multiple onChange={(e) => {setProdImages(e.target.files)}}/>
+                            </FormGroup>            
+                            {
+                                !check && (
+                                    
+                                    <button className="buy_btn" type="submit" onClick={uploadImage}>Upload Image</button>
+                                )
+                            }
+                            {
+                                check && (
+                                    <button className="buy_btn" type="submit" onClick={uploadProduct}>Upload Product</button>
+                                )
+                            }
+                        </Form>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
     );
 }
 

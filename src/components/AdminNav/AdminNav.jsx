@@ -1,26 +1,14 @@
-import React from 'react'
+import React from "react";
+import "./AdminNav.css";
 import { Link } from "react-router-dom";
 
-//function
-const AdminHome = ({setisAdmin}) => {
-   
-  return (
-    // <div>
-    //     <Link to="/" >
-    //             HOME
-    //     </Link>
-    //     <button onClick={() => setisAdmin(false)}>
-    //         LogOut
-    //     </button>
-    //     <Link to="/admin/AddNewProduct" >
-    //             Add new Product
-    //     </Link>
-
-    // </div>
-    <div className="home-container">
+class AdminNav extends React.Component {
+  render() {
+    return (
+      <div className="home-container">
         <nav className="navbar navbar-expand-lg navbar-light ">
           <div className="container-fluid">
-              <Link to="" className="navbar-brand text-white link-style">
+              <Link to="/" className="navbar-brand text-white link-style">
                 Parivarthana
               </Link>
             <button
@@ -37,26 +25,27 @@ const AdminHome = ({setisAdmin}) => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-md-auto gap-2">
                 <li className="nav-item rounded">
-                    <Link to="/" className="nav-link active text-white link-style">
+                    <Link to="/productPageAdmin" className="nav-link active text-white link-style">
                       Products
                     </Link>
                 </li>
                 <li className="nav-item rounded">
-                    <Link to="/admin/AddNewProduct" className="nav-link text-white link-style">
+                    <Link to="/AddProduct" className="nav-link text-white link-style">
                       Add Products
                     </Link>
                 </li>
                 <li className="nav-item rounded">
-                    <button className="nav-link text-white link-style" onClick={() => setisAdmin(false)}>
+                    <Link to="/" className="nav-link text-white link-style">
                       Log Out
-                    </button>
+                    </Link>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
-  )
+    );
+  }
 }
 
-export default AdminHome
+export default AdminNav;

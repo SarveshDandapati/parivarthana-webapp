@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from "react";
 import AdminHome from "./components/HomeAdmin/Home";
 import AdminProduct from "./components/productPageAdmin/products";
+import AdminNav from "./components/AdminNav/AdminNav";
 
 const App = () => {
     const [isAdmin, setisAdmin] = useState(false)
@@ -23,10 +24,12 @@ const App = () => {
                     isAdmin ? (
                         <>
                             <AdminHome setisAdmin={setisAdmin} />
+                            {/* <AdminNav/> */}
                             <Routes>
                                 <Route path="/" element={<AdminProduct />} />
                                 <Route path="/admin/AddNewProduct" element={<AddProduct />} />
                             </Routes>
+                            <Footer />
                         </>
                     ) : (
                         <>

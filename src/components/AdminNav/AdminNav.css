@@ -1,0 +1,7 @@
+.link-style{
+    text-decoration: none;
+    color: white;
+}
+.link-style:hover{
+    text-shadow: 2px 0px 5px white;
+}
