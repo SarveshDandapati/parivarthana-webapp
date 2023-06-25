@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp/SignUp.jsx"
 import ProductPage from "./components/ProductPage/ProductPage.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import NavBar from "./components/NavBar/NavBar";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import AddProduct from "./components/AddProduct/AddProduct";
@@ -33,9 +34,10 @@ const App = () => {
                         </>
                     ) : (
                         <>
-                            <HomePage />
+                            <NavBar />
                             <Routes>
-                                <Route path="/" element={<About />} />
+                                <Route path="/" element={<HomePage />} />
+                                <Route path="/about" element={<About />} />
                                 <Route path="/product/:id" element={<ProductDetails />} />
                                 <Route path="/signIn" element={<SignIn setisAdmin={setisAdmin} />} />
                                 <Route path="/signUp" element={<SignUp />} />
